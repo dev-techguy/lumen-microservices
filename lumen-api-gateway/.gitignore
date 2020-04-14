@@ -8,3 +8,4 @@ Homestead.yaml
 ./vscode
 .idea
 .vscode
+storage/*.key

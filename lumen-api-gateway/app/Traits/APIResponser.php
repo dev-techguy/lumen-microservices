@@ -21,6 +21,17 @@ trait APIResponser
         return response($data, $code)->header('Content-Type', 'application/json');
     }
 
+    /**
+     * valid response
+     * @param $data
+     * @param int $code
+     * @return JsonResponse
+     */
+    public function validResponse($data, $code = Response::HTTP_OK)
+    {
+        return response()->json(['data' => $data], $code);
+    }
+
 
     /**
      * success response
