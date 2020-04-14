@@ -21,7 +21,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        return $this->sucessResponse(Author::query()->latest()->get());
+        return $this->successResponse(Author::query()->latest()->get());
     }
 
     /**
@@ -39,7 +39,7 @@ class AuthorController extends Controller
             'country' => ['required', 'max:255'],
         ]);
 
-        return $this->sucessResponse(Author::query()->create($request->all()), Response::HTTP_CREATED);
+        return $this->successResponse(Author::query()->create($request->all()), Response::HTTP_CREATED);
     }
 
     /**
@@ -50,7 +50,7 @@ class AuthorController extends Controller
      */
     public function show($id)
     {
-        return $this->sucessResponse(Author::query()->findOrFail($id));
+        return $this->successResponse(Author::query()->findOrFail($id));
     }
 
     /**
@@ -77,7 +77,7 @@ class AuthorController extends Controller
 
         $author->save();
 
-        return $this->sucessResponse($author);
+        return $this->successResponse($author);
     }
 
     /**
@@ -91,6 +91,6 @@ class AuthorController extends Controller
     {
         $author = Author::query()->findOrFail($id);
         $author->delete();
-        return $this->sucessResponse($author);
+        return $this->successResponse($author);
     }
 }

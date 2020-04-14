@@ -21,7 +21,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return $this->sucessResponse(Book::query()->latest()->get());
+        return $this->successResponse(Book::query()->latest()->get());
     }
 
 
@@ -41,7 +41,7 @@ class BookController extends Controller
             'author_id' => ['required', 'min:1'],
         ]);
 
-        return $this->sucessResponse(Book::query()->create($request->all()), Response::HTTP_CREATED);
+        return $this->successResponse(Book::query()->create($request->all()), Response::HTTP_CREATED);
     }
 
     /**
@@ -52,7 +52,7 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        return $this->sucessResponse(Book::query()->findOrFail($id));
+        return $this->successResponse(Book::query()->findOrFail($id));
     }
 
 
@@ -81,7 +81,7 @@ class BookController extends Controller
 
         $author->save();
 
-        return $this->sucessResponse($author);
+        return $this->successResponse($author);
     }
 
     /**
@@ -95,6 +95,6 @@ class BookController extends Controller
     {
         $author = Book::query()->findOrFail($id);
         $author->delete();
-        return $this->sucessResponse($author);
+        return $this->successResponse($author);
     }
 }
