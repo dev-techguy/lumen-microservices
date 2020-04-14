@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use App\Traits\APIResponser;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -12,7 +13,6 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
-use MongoDB\Driver\Exception\AuthenticationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
