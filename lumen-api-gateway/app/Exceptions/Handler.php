@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App\Traits\APIResponser;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -15,6 +16,8 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    use APIResponser;
+
     /**
      * A list of the exception types that should not be reported.
      *
