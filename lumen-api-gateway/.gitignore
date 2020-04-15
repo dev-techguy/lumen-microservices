@@ -8,4 +8,5 @@ Homestead.yaml
 ./vscode
 .idea
 .vscode
-storage/*.key
+storage/oauth-private.key
+storage/oauth-public.key
